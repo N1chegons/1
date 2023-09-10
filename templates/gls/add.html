@@ -1,0 +1,19 @@
+{% extends 'gls/index.html' %}
+{% load static %}
+{% block title %}Добавить товар{% endblock %}
+{% block content %} 
+   <div class="card-add">
+      <h1>Добавить товар</h1>
+      <form method="post">
+         {% csrf_token %}
+         <div class="inputs-adds">
+            {{ form.img }}<br>
+            {{ form.title }}<br>
+            {{ form.start }}<br>
+            {{ form.desc }}<br>
+            <span>{{ error }}</span>
+            <button class="btn-add" type="submit">Добавить</button>
+         </div>
+      </form>
+   </div>
+{% endblock %}

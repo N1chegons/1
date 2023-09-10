@@ -1,0 +1,43 @@
+{% extends 'gls/index.html' %}
+{% load static %}
+{% block title %}Контакты{% endblock %}
+{% block content %} 
+
+<h2 style="justify-content: center;text-align: center;margin-top: 30px;margin-left: 80px;">Наши контакты</h2>
+
+<div class="card text-center" style="margin-left: 80px;margin-top: 100px;">
+   <div class="card-header">
+     Контакты
+   </div>
+   <div class="card-body">
+     <h5 class="card-title">Наши номера:</h5>
+     <p class="card-text">+7-999-999-99-99</p>
+     <p class="card-text">+7-888-888-88-88</p>
+   </div>
+   <div class="card-footer text-body-secondary">
+     Ответим на любую просьбу!
+   </div>
+ </div>
+ <div class="card text-center" style="margin-left: 80px;margin-top: 100px;">
+   <div class="card-header">
+      Социальные сети
+   </div>
+   <div class="card-body">
+      <h5 class="card-title">Наши соц. сети:</h5>
+      <p class="card-text">VK</p>
+      <p class="card-text">INSTAGRAM</p>
+   </div>
+   <div class="card-footer text-body-secondary">
+      Ответим на любую просьбу!
+   </div>
+</div>
+ 
+
+<div class="header-bottom" style='margin-top: 200px;'>
+   <div>
+      <img src="{% static 'gls/img/Frame 85.svg'%}" alt="">
+   </div>
+</div>
+
+
+{% endblock %}

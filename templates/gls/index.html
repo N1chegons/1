@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   <link href="{% static 'gls/main.css' %}" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+   <title>{% block title %}Главная{% endblock %}</title>
+</head>
+<body>
+   <div class="container">
+      <div class="header">
+         <div class="images-header">
+            <img src="{% static 'gls/img/logo.svg'%}" alt="">
+         </div>
+         <div class="nav">
+            <a href="{% url 'main' %}">Главная</a>
+            <a href="{% url 'catalog' %}">Продукция</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <a href="{% url 'contact' %}">Контакты</a>
+         </div>
+      </div>
+
+      {% block content %}
+      <div class="main">
+         <div class="main-left">
+            <h1>Простые вещи.<br> Из бумаги</h1>
+            <p>Бума́га (предположительно от итал. bombagia, первоисточником же считается иранский) — волокнистый материал с минеральными добавками. </p>
+            <button><a href="#">Каталог</a></button>
+         </div>
+         <div class="main-right">
+            <img src="{% static 'gls/img/main-img.png'%}" alt="">
+         </div>
+      </div>
+
+      <div class="challanges">
+         <div class="info-challange">
+            <div class="information">
+               <img src="{% static 'gls/img/buissnes1.png'%}" alt="">
+               <div class="desc-chal">
+                  <span>V.1</span>
+                  <p>Результат вашего обучения</p>
+               </div>
+            </div>
+
+            <div class="information">
+               <img src="{% static 'gls/img/buissnes2.png'%}" alt="">
+               <div class="desc-chal">
+                  <span>V.2</span>
+                  <p>Результат вашего обучения</p>
+               </div>
+            </div>
+
+            <div class="information">
+               <img src="{% static 'gls/img/buissnes3.png'%}" alt="">
+               <div class="desc-chal">
+                  <span>V.3</span>
+                  <p>Результат вашего обучения</p>
+               </div>
+            </div>
+         
+         </div>
+
+         <div class="info2-chall">
+            <div class="info-challange">
+               <img src="{% static 'gls/img/businessbig.png'%}" alt="">
+               <div class="desc-chal2">
+                  <span>Максимальная белизна</span>
+                  <p>Для повышения белизны, гладкости и мягкости в состав бумажной массы вводят белые минеральные вещества: мел, тальк, каолин и др. Эта операция называется наполнением.
+                     <br><br>Отлив бумажного листа осуществляют на бумагоделательной машине, важнейшей частью которой является непрерывно движущаяся (как транспортер) металлическая или капроновая сетка.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="market">
+         <div class="market-block">
+            <img src="{% static 'gls/img/Frame1.png'%}" alt="">
+            <h2>Упаковка</h2>
+            <span>Тираж: от 50 штук</span>
+            <p>Сделано из крафт-бумаги или плотного картона. Упаковки имеют различные формы и расцветки, изготовим форму под заказ.</p>
+            <a href="#">Подробнее</a>
+         </div>
+
+         <div class="market-block">
+            <img src="{% static 'gls/img/Frame 2.png'%}" alt="">
+            <h2>Пакеты</h2>
+            <span>Тираж: от 200 штук</span>
+            <p>С прямоугольным дном. От 10 см до 60 см по высоте. Материалы: картон, крафт-бумага. Различные расцветки и дизайн.</p>
+            <a href="#">Подробнее</a>
+         </div>
+
+         <div class="market-block">
+            <img src="{% static 'gls/img/Frame 3.png'%}" alt="">
+            <h2>Кейсы</h2>
+            <span>Тираж: от 30 штук</span>
+            <p>Подойдет для документов и других бумаг. Различные расцветки, размеры и плотность. Материал: прессованная бумага.</p>
+            <a href="#">Подробнее</a>
+         </div>
+
+         <div class="market-block">
+            <img src="{% static 'gls/img/Frame 4.png'%}" alt="">
+            <h3>Другие изделия</h3>
+            <span>Тираж: от 100 штук</span>
+            <p>Нестандартные упаковки, кейсы и другие изделия различных размеров и конфигураций. Изготовим в кратчайшие сроки.</p>
+            <a href="#">Подробнее</a>
+         </div>
+      </div>
+
+      <div class="comunit">
+         <img src="{% static 'gls/img/Frame 229.png'%}" alt="">
+      </div>
+
+      <div class="shoping">
+         <div class="left-shoping">
+            <h2>Simple скетчбук</h2>
+            <p>80 листов, твердая обложка, бумага  Fabriano 200 г/м2. Подойдет и для графики и для акварели. Для самых смелых творческих замыслов!</p>
+            <button><a href="#">Купить</a></button>
+         </div>
+         <div class="right-shoping">
+            <img src="{% static 'gls/img/pic.png'%}" alt="">
+         </div>
+      </div>
+
+
+      <div class="header-bottom">
+         <div>
+            <img src="{% static 'gls/img/Frame 85.svg'%}" alt="">
+         </div>
+      </div>
+      {% endblock %}
+
+   </div>
+</body>
+</html>

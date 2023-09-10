@@ -1,0 +1,44 @@
+{% extends 'gls/index.html' %}
+{% load static %}
+{% block title %}Продукция{% endblock %}
+{% block content %} 
+
+
+<h2 style="justify-content: center;text-align: center;margin-top: 30px;">Наша Продукция</h2>
+
+<div class="market">
+   <div class="market-block">
+         <!-- <img src="{% static 'gls/img/Frame1.png'%}" alt="">
+         <h2>Упаковка</h2>
+         <span>Тираж: от 50 штук</span>
+         <p>Сделано из крафт-бумаги или плотного картона. Упаковки имеют различные формы и расцветки, изготовим форму под заказ.</p>
+      </div> --> 
+      {% for el in cat %}
+         <img src="{{ el.img }}" alt="">
+         <h2>{{ el.title }}</h2>
+         <span>{{ el.start }}</span>
+         <p>{{ el.desc }}</p>
+      {% endfor %}
+   </div>
+</div>
+
+<div style="
+text-align: center;
+">
+   <a href="{% url 'add_card' %}"><button class="btn-cat" style="    
+      padding: 10px 507px;
+      margin-left: 99px;
+      border: none;
+      border-radius: 29px;
+      transition: all 1s ease;
+      color: #726fff;"
+      onmouseover="this.style.backgroundColor='#4C5866';" onmouseout="this.style.backgroundColor='#d1d1d1';">Добавить товар</button></a>
+</div>
+
+
+<div class="header-bottom" style='margin-top: 200px;'>
+   <div>
+      <img src="{% static 'gls/img/Frame 85.svg'%}" alt="">
+   </div>
+</div>
+{% endblock %}
